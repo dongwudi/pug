@@ -1,0 +1,10 @@
+## 包含 Include
+
+```
+doctype html
+html
+  include ./head.pug
+  body
+    h1 我的网站
+    p 欢迎来到我这简陋得不能再简陋的网站。
+```

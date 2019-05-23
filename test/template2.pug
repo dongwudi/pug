@@ -1,0 +1,23 @@
+//- - var friends = 10
+//- case friends
+//-   when 0
+//-     p 您没有朋友
+//-   when 1
+//-     p 您有一个朋友
+//-   default
+//-     p 您有 #{friends} 个朋友
+
+//- - var friends = 0
+//- case friends
+//-   when 0
+//-     - break
+//-   when 1
+//-     p 您的朋友很少
+//-   default
+//-     p 您有 #{friends} 个朋友
+
+- var friends = 1
+case friends
+  when 0: p 您没有朋友
+  when 1: p 您有一个朋友
+  default: p 您有 #{friends} 个朋友

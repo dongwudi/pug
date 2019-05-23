@@ -1,0 +1,40 @@
+ul
+  each val in [1, 2, 3, 4, 5]
+    li= val
+
+- var n = 0;
+ul
+  while n < 4
+    li= n++
+
+//- 定义
+mixin list
+  ul
+    li foo
+    li bar
+    li baz
+//- 使用
++list
++list
+
+mixin pet(name)
+  li.pet= name
+ul
+  +pet('猫')
+  +pet('狗')
+  +pet('猪')
+
+mixin article(title)
+  .article
+    .article-wrapper
+      h1= title
+      if block
+        block
+      else
+        p 没有提供任何内容。
+
++article('Hello world')
+
++article('Hello world')
+  p 这是我
+  p 随便写的文章

@@ -1,0 +1,45 @@
+- var authenticated = true
+body(class=authenticated ? 'authed' : 'anon')
+    p #{name}的pug代码！
+    |
+    |
+    a(href='baidu.com') 百度
+    |
+    |
+    a(class='button' href='baidu.com') 百度
+    |
+    |
+    a(class='button', href='baidu.com') 百度
+    input(
+    type='checkbox'
+    name='agreement'
+    checked
+    )
+    input(data-json=`
+    {
+        "非常": "长的",
+        "数据": true
+    }
+    `)
+
+    - var url = 'pug-test.html';
+    a(href='/' + url) 链接
+    |
+    |
+    - url = 'https://example.com/'
+    a(href=url) 另一个链接
+    a(style={color: 'red', background: 'green'})
+    - var classes = ['foo', 'bar', 'baz']
+    a(class=classes)
+    |
+    |
+    //- the class attribute may also be repeated to merge arrays
+    a.bang(class=classes class=['bing'])
+
+    - var currentUrl = '/about'
+    a(class={active: currentUrl === '/'} href='/') Home
+    |
+    |
+    a(class={active: currentUrl === '/about'} href='/about') About
+
+    
